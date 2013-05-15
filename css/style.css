@@ -1,0 +1,254 @@
+html {
+    height:100%
+}
+
+body {
+  margin:0px;
+  padding:0px;
+  font:normal 15px/20px Arial,sans-serif;
+  background:#fff;
+  overflow:hidden;
+  height:100%
+  }
+
+article {
+  width:33.3333%;
+  min-width:320px;
+  position:relative;
+  padding-top:40px;
+  padding-bottom:15%;
+  }
+  
+.iconSelected {
+    border:solid 1px black;
+}
+
+a img {
+	border: none;
+}
+
+section {
+  padding:40px;
+  
+  position:relative;
+  transition:background 500ms, color 500ms;
+  -moz-transition:background 500ms, color 500ms;
+  -webkit-transition:background 500ms, color 500ms;
+  }
+
+section,
+section a {
+  color:#888;
+  color:rgba(128,128,128,0.1);
+  text-decoration:none;
+  text-shadow:rgba(64,64,64,1) 0px 0px 4px;
+  /*FOR IE9+*/
+  filter: Shadow(Color=#404040, Direction=135, Strength=3) Shadow(Color=#404040, Direction=315, Strength=3);
+  }
+
+section.active {
+  background:#222;
+  color:#eee;
+  }
+ 
+section.active a { color:#eee; }
+section.active small { color:#aaa; }
+
+h1 { font-size:2em; line-height:1em; }
+h2 { font-size:1.3333em; }
+h1,h2 { margin:0px 0px 10px; }
+h4,h5 { margin:10px 0px 0px 0px; }
+p { margin:0px; }
+
+.scroll {
+  position:absolute;
+  right:0px; bottom:0px;
+  font-size:10px;
+  text-transform:uppercase;
+  padding:5px 10px;
+  }
+
+.cover h1 {
+    font-size:3em;
+}
+
+.cover:before {
+  content:'';
+  display:block;
+  width:120px; height:120px;
+  margin:0px auto 20px;
+  }
+
+#cover-img {
+    position: relative;
+    left: 33.33333%;
+    visibility:hidden;
+}
+
+#cover.active img {
+    visibility:visible;
+}
+
+#pane {
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  width:66.6666%;
+  }
+  
+#map  {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  width:200%;
+  left:-50%;
+  transition:opacity 250ms;
+  -moz-transition:opacity 250ms;
+  -webkit-transition:opacity 250ms;
+  }
+
+#list_section {
+    height:inherit;
+    overflow:scroll;
+    margin-left:40px;
+}
+
+#effect {
+    position: absolute;
+    bottom: 5%;  
+    right: 5%;  
+    height: auto;
+    width: auto;
+    display:none;
+    z-index:1;
+    padding:20px;
+    /*opacity:0.6;*/ 
+    background:#222;
+      color:#eee;
+}
+
+
+
+#effect a {
+    color:#eee;
+}
+
+#fin.active{
+     background:#eee;
+     color: #222;
+     text-shadow: none;
+}
+
+#fin img {
+    margin:20px 0px 20px;
+}
+
+#fin h5 {
+    margin-top:0px !important;
+}
+
+.close_box{
+    float: right;
+    position:relative;
+    top:-15px;
+    right: -10px;
+    cursor: hand; 
+    cursor: pointer; 
+}
+
+#links a img,
+#cover img {
+    padding-right:10px;
+    padding-top: 10px;
+}
+
+.trajet {
+    text-decoration: underline;
+}
+
+#diporama{
+    position:relative;
+    display:none;
+    z-index:1;
+    padding: 50px 50px;
+}
+
+#flickr-before {
+    display:none;
+    position: absolute;
+    left:0px;
+    top: 150px;
+}
+
+#flickr-close {
+    position: absolute;
+    left:685px;
+    top: 5px;
+}
+
+#flickr-after {
+    display:none;
+    position: absolute;
+    left: 660px;
+    top: 150px;
+}
+
+.ui-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 #222222;
+}
+
+.ui-widget-header {
+    display:none;
+}
+
+.ui-dialog {
+    padding:0;
+}
+
+.lightbox-hidden {
+    display:none;
+}
+
+#avertissement {
+    color: white;
+}
+
+/* Distinguish the "cover page" visually other sections. */
+ body.section-0 #map { opacity:0.75; }
+
+@media (max-width:640px) {
+  body {
+    font-size:12px;
+    line-height:16px;
+    }
+  article {
+    width:100%;
+    min-width:100%;
+    padding-top:0px;
+    padding-bottom:200%;
+    }
+  section {
+    text-shadow:none;
+    margin-left:0px;
+    padding:30px;
+    }
+  section.active {
+    position:fixed;
+    top:0px; left:0px; right:0px;
+    }
+  #pane { width:100%; }
+  #map  {
+    bottom:0%;
+    left:0%;
+    width:100%;
+    height:150%;
+    }
+  }
+
+@media (min-width:1280px) {
+  body {
+    font-size:18px;
+    line-height:24px;
+    }
+  }

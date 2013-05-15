@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'/>
+ <title>Demo-Matane</title>   
+
+ <script src="lib/leaflet-0.5/leaflet.js"></script>
+ <script src="lib/jquery/jquery-1.9.1.min.js"></script>
+ <script src="lib/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+ <script type="text/javascript" src="lib/lightbox/js/lightbox.js"></script>
+ <script src="js/geojson.js"></script>
+ <script src="js/map.js"></script>
+ <script type="text/javascript" src="js/diaporama.js"></script>
+
+ <link rel="stylesheet" href="lib/jquery-ui-1.10.3.custom/css/smoothness/jquery-ui.css" />
+ <link rel="stylesheet" href="lib/leaflet-0.5/leaflet.css" />
+ <link rel="stylesheet" href="lib/lightbox/css/lightbox.css" type="text/css" />
+ <link href='css/style.css' rel='stylesheet' />
+</head>
+
+<body class='section-0'>
+
+
+<div id="effect" class="ui-widget-content ui-corner-all">
+    <div class="close_box">x</div>
+    <h2></h2>
+    <p></p>
+    <div id="links"></div>
+    <div class="instagram"></div>
+</div>
+
+<div id='pane'><div id='map'></div></div>
+
+<div id="diporama">
+    <div id="flickr-close"><img src="lib/lightbox/images/close.png" width="24" height="24"></div>
+    <img id="flickr-before" src="lib/lightbox/images/prev.png" width="36" height="36"></img> 
+    <img id="flickr-after" src="lib/lightbox/images/next.png" width="36" height="36"></img>
+    <p id='avertissement'>Ce démo n'a été testé qu'avec Chrome et Firefox.</p>
+</div>
+
+<div id='list_section'>
+<article>
+  <section id='cover' class='cover active'>
+    <img id=cover-img src="icons/hv3.png" width="120" height="120"></img>
+    <h1>Matane</h1>
+    <p>Une ville attractive et animée!</p>
+    <a target="_blank" href="https://www.facebook.com/pages/Ville-de-Matane-Page-officielle/228897530527124"><img src="icons/facebook.png" width="32" height="32"></img></a>
+    <img id=flickr-img src="icons/flick.png" width="32" height="32"></img>
+    <small class='scroll'>Dérouler ▼</small>
+  </section>
+  <section id='saumon'>
+    <h2>Poste d'observation du saumon</h2>
+    <p>Vivez l'odyssée de la migration du saumon de l'Atlantique. Le saumon de l'Altlantique sauvage a depuis toujours capté l'imagination humaine. C'est un symbole de force, de combativité et de noblesse. Histoire de la rivière Matane et de ses barrages. </p>
+  </section>
+  <section id='sciage'>
+    <h2>Monument des pionniers du sciage</h2>
+    <p>De 1897 à 1958, engin qui mettait en mouvement l'ancienne scierie de la compagnie Price, alors moteur économique de la région de Matane. Le monument rend hommage au travail des pionniers de l'industrie du sciage.</p>
+  </section>
+  <section id='rochelais'>
+    <h2>Place des Rochelais</h2>
+    <p>Ce lieu rend hommage aux pionniers de Matane, débarqués au début du XVIe siècle et provenant de La Rochelle en France. L'endroit commémore également les 385 ans de tradition maritime de la ville de Matane. Voyez la reproduction stylisée d'une goélette à fond plat, remplie de galets du Canada, rappelant ainsi que les Rochelais lestaient leurs embarcations avant de repartir pour la France. De cet endroit, vous apercevez la marina et le Centre d'art le Barachois et pouvez vous rendre à la Promenade des Capitaines.</p>
+  </section>
+  <section id='riotel'>
+    <h2>Hôtel Riotel</h2>
+    <p>Hôtel et Centre de Congrês Riotel Matane.</p>
+  </section>
+  <section id='phare'>
+    <h2>Phare de Matane</h2>
+    <p>Un musée reconstituant l'aventure maritime de Matane vous attend au Musée maritime du Phare de Matane. De la fin juin à la mi-août, des animateurs vous accompagnent dans la découverte de l'histoire maritime de Matane : photos, documents, artefacts permettent de vivre l'aventure fantastique de ce carrefour de la mer... À la place de la lentille qui a été retirée de la tourelle quand le phare fut désaffecté, on a installé une timonerie de navire munie d'instruments de navigation modernes qui servent de nos jours à diriger les navires.</p>
+  </section>
+  <section id='rafiot'>
+    <h2>Restaurant Le Rafiot</h2>
+    <p>Restaurant Le Rafiot: Poissons - Fruits de mer - Grillades Poissons</p>
+  </section>
+  <section id='horace-bouffard'>
+    <h2>La Maison Horace-Bouffard</h2>
+    <p>Maison paysanne traditionnelle typique de la Matanie du début de 1897. Exposition d'objets et de meubles de la vie quotidienne du début du siècle. On a baptisé cette maison : La maison au six mariages. Laissez-vous raconter cette histoire fantastique, un record mondial homologué au livre des records Guiness.</p>
+    <a class="trajet-pin" href="#"><img src="icons/pin.png" width="14" height="22"></img></a>
+    <a class="trajet" href="#">Montrer le trajet</a>
+  </section>
+    <section id='fin'>
+    <h2>Prototype réalisé par <a target=\"_blank\" href="http://www.mapgears.com/fr/">Mapgears</a></h2>
+    <p>2383, chemin Sainte-Foy</p>
+    <p>bureau 202</p>
+    <p>Québec, QC G1V 1T1</p>
+    <p>Telephone: +1 418.476.7139 </p>
+    <p>Courriel: <a href="mailto:info@mapgears.com">info@mapgears.com</a> </p>
+    <p>Twitter: <a target=\"_blank\" href="https://twitter.com/Mapgears">@mapgears</a> </p>
+    <!--div>
+        <a target=\"_blank\" href="info@mapgears.com"> <img src="icons/EmailIcon.png" width="24" height="24"></img></a>
+        <a target=\"_blank\" href="https://twitter.com/Mapgears"> <img src="icons/twitter-icon.png" width="24" height="24"></img></a>
+      </div-->
+      <a target=\"_blank\" href="http://www.mapgears.com/fr/"> <img src="icons/mapgears-nb.png"></img></a>
+      <h5>Adapté de <a target=\"_blank\" href="http://mapbox.com/tutorial-sherlock/">mapbox.com/tutorial-sherlock/</a></h5>
+      <h5>Données sources © <a target=\"_blank\" href="http://www.openstreetmap.org/copyright">OpenStreetMap Contributors</a></h5>
+  </section>
+</article>
+</div>
+
+
+</body>
+</html>
+
