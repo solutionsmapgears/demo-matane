@@ -25,16 +25,38 @@ article {
 
 a img {
 	border: none;
+	cursor: pointer;
 }
+
+#cover {
+	padding-bottom: 55px;
+}
+
+#cover a img{
+	position:absolute;
+}
+
+#cover a img:hover
+{
+	width:40px;
+	height:40px;
+} 
 
 section {
   padding:40px;
-  
+  cursor: pointer;
   position:relative;
   transition:background 500ms, color 500ms;
   -moz-transition:background 500ms, color 500ms;
   -webkit-transition:background 500ms, color 500ms;
   }
+  
+section:hover {
+	background:#E0E0E0;
+	opacity: 0.5;
+	color:rgba(128,128,128,0.6);
+	text-shadow:rgba(64,64,64,1) 0px 0px 2px;
+}
 
 section,
 section a {
@@ -49,6 +71,7 @@ section a {
 section.active {
   background:#222;
   color:#eee;
+  opacity: 1;
   }
  
 section.active a { color:#eee; }
@@ -179,12 +202,14 @@ p { margin:0px; }
     position: absolute;
     left:0px;
     top: 150px;
+    cursor: pointer;
 }
 
 #flickr-close {
     position: absolute;
     left:685px;
     top: 5px;
+    cursor: pointer;
 }
 
 #flickr-after {
@@ -192,6 +217,18 @@ p { margin:0px; }
     position: absolute;
     left: 660px;
     top: 150px;
+    cursor: pointer;
+}
+
+#flickr-img {
+	cursor: pointer;
+	position:absolute;
+	left: 90px;
+}
+
+#flickr-img:hover {
+	width:40px;
+	height:40px;
 }
 
 .ui-dialog .ui-dialog-content {
