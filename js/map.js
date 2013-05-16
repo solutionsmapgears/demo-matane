@@ -473,7 +473,10 @@ $(function() {
     });
     
     $("#flickr-close").bind('click',function() {
-        $('#avertissement').remove();
         $( "#diporama" ).dialog( "close" );
+    });
+
+    $('#diporama').on('dialogclose',function() {
+        $('#avertissement').remove();
     });
 });
