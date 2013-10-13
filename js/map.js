@@ -113,7 +113,8 @@ $(function() {
     /*-------------------------------------------------------
                             LAYER
     -------------------------------------------------------*/
-    L.tileLayer('http://cartalib.mapgears.com/mapcache/tms/1.0.0/mgmap@g3857/{z}/{x}/{y}.png', {
+   // L.tileLayer('http://cartalib.mapgears.com/mapcache/tms/1.0.0/mgmap@g3857/{z}/{x}/{y}.png', {
+     L.tileLayer('http://cartalibv2.mapgears.com/mapcache/tms/1.0.0/grayprint@g/{z}/{x}/{y}.png', {
         maxZoom: 18,
         tms: true,
         dragging: false,
